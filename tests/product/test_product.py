@@ -1,26 +1,21 @@
 from inventory_report.inventory.product import Product
-from .mocks import MockProduct
 
 
 def test_cria_produto():
-    mock = MockProduct()
     product = Product(
-        mock.product["id"],
-        mock.product["nome_do_produto"],
-        mock.product["nome_da_empresa"],
-        mock.product["data_de_fabricacao"],
-        mock.product["data_de_validade"],
-        mock.product["numero_de_serie"],
-        mock.product["instrucoes_de_armazenamento"],
+        1,
+        "Buds 3 Pro",
+        "Xiaomi",
+        "03/11/2022",
+        "03/11/2023",
+        "a1b2c3",
+        "Limpar uma vez por semana",
     )
 
-    assert product.id == mock.product["id"]
-    assert product.nome_do_produto == mock.product["nome_do_produto"]
-    assert product.nome_da_empresa == mock.product["nome_da_empresa"]
-    assert product.data_de_fabricacao == mock.product["data_de_fabricacao"]
-    assert product.data_de_validade == mock.product["data_de_validade"]
-    assert product.numero_de_serie == mock.product["numero_de_serie"]
-    assert (
-        product.instrucoes_de_armazenamento
-        == mock.product["instrucoes_de_armazenamento"]
-    )
+    assert product.id == 1
+    assert product.nome_do_produto == "Buds 3 Pro"
+    assert product.nome_da_empresa == "Xiaomi"
+    assert product.data_de_fabricacao == "03/11/2022"
+    assert product.data_de_validade == "03/11/2023"
+    assert product.numero_de_serie == "a1b2c3"
+    assert product.instrucoes_de_armazenamento == "Limpar uma vez por semana"
