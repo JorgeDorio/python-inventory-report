@@ -1,5 +1,4 @@
 from inventory_report.inventory.product import Product
-from ..product.mocks import MockProduct
 
 
 def test_relatorio_produto():
